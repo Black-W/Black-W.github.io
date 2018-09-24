@@ -1,0 +1,95 @@
+{% extends "base.html" %} {% block main %}
+<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h3 class="panel-title"><span class="glyphicon glyphicon-file"></span> Article Management</h3>
+                </div>
+                <div class="panel-body">
+                    <div>
+
+                        <form action="fileUpload" method="post" enctype="multipart/form-data">
+                            <span class="btn btn-default btn-file">
+                                    Browse files <input type="file" name="file" multiple="multiple">
+                                </span>
+                            <button type="submit" class="btn btn-default">
+                                    <span class="glyphicon glyphicon-upload">Upload</span>
+                            </button>
+                        </form>
+                            
+                        <br/>
+                        
+                        <ul id="myTab" class="nav nav-tabs">
+                                <li class="active"><a href="#1" data-toggle="tab">1</a></li>
+                                <li><a href="#2" data-toggle="tab">2</a></li>
+                                <li ><a href="#3" data-toggle="tab">3</a></li>
+                                <li ><a href="#4" data-toggle="tab">4</a></li>
+                                <li ><a href="#5" data-toggle="tab">5</a></li>
+                                <li ><a href="#6" data-toggle="tab">6</a></li>
+                                <li ><a href="#7" data-toggle="tab">7</a></li>
+                                <li ><a href="#8" data-toggle="tab">8</a></li>
+
+                            </ul>
+                            <div id="myTabContent" class="tab-content">
+                                <div class="tab-pane fade in active" id="1">
+                                    {{level1}}
+                                </div>
+                                <div class="tab-pane fade" id="2">
+                                    {{level2}}
+                                </div>
+                                <div class="tab-pane fade" id="3">
+                                    {{level3}}
+                                </div>
+                                <div class="tab-pane fade" id="4">
+                                    {{level4}}
+                                </div>
+                                <div class="tab-pane fade" id="5">
+                                    {{level5}}
+                                </div>
+                                <div class="tab-pane fade" id="6">
+                                    {{level6}}
+                                </div>
+                                <div class="tab-pane fade" id="7">
+                                    {{level7}}
+                                </div>
+                                <div class="tab-pane fade" id="8">
+                                    {{level8}}
+                                </div>
+                            </div>
+                       
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h3 class="panel-title"><span class="glyphicon glyphicon-flag"></span> Student Info</h3>
+                </div>
+                <div class="panel-body">
+                    <li>由于程序员非常懒惰的问题，我们只做了批量上传，请一次上传多个文件，点击浏览文件，按住'Ctrl'，左键选取您需要上传的文件</li>
+                    <li>上传文件的命名方式请按照"1fr.docx"的格式,也就是说开头的数字决定了这个文章的等级</li>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <h1>For other module</h1>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h3 class="panel-title">Demo</h3>
+                </div>
+                <div class="panel-body">
+                    <p>demo</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

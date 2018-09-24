@@ -1,0 +1,83 @@
+{% extends "base.html" %} {% block main %}
+<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h3 class="panel-title"><span class="glyphicon glyphicon-file"></span> Article</h3>
+                </div>
+                <div class="panel-body">
+                    <div>
+                        <ul id="myTab" class="nav nav-tabs">
+                                <li class="active"><a href="#1" data-toggle="tab">1</a></li>
+                                <li><a href="#2" data-toggle="tab">2</a></li>
+                                <li ><a href="#3" data-toggle="tab">3</a></li>
+                                <li ><a href="#4" data-toggle="tab">4</a></li>
+                                <li ><a href="#5" data-toggle="tab">5</a></li>
+                                <li ><a href="#6" data-toggle="tab">6</a></li>
+                                <li ><a href="#7" data-toggle="tab">7</a></li>
+                                <li ><a href="#8" data-toggle="tab">8</a></li>
+
+                            </ul>
+                            <div id="myTabContent" class="tab-content">
+                                <div class="tab-pane fade in active" id="1">
+                                    {{level1}}
+                                </div>
+                                <div class="tab-pane fade" id="2">
+                                    {{level2}}
+                                </div>
+                                <div class="tab-pane fade" id="3">
+                                    {{level3}}
+                                </div>
+                                <div class="tab-pane fade" id="4">
+                                    {{level4}}
+                                </div>
+                                <div class="tab-pane fade" id="5">
+                                    {{level5}}
+                                </div>
+                                <div class="tab-pane fade" id="6">
+                                    {{level6}}
+                                </div>
+                                <div class="tab-pane fade" id="7">
+                                    {{level7}}
+                                </div>
+                                <div class="tab-pane fade" id="8">
+                                    {{level8}}
+                                </div>
+                            </div>
+                       
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h3 class="panel-title"><span class="glyphicon glyphicon-flag"></span> Notification</h3>
+                </div>
+                <div class="panel-body">
+                    <li>选择标签页上的等级查看相应等级的文章</li>
+                    <li>完成的题目将可以查看答案</li>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <h1>For other module</h1>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h3 class="panel-title">Demo</h3>
+                </div>
+                <div class="panel-body">
+                    <p>demo</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
