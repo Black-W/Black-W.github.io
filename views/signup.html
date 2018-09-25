@@ -1,4 +1,9 @@
 {% extends "base.html" %} {% block main %}
+
+<head>
+    <link rel="stylesheet" href="../static/css/validator.css">
+    <script type="text/javascript" src="../static/js/Validform_v5.3.2_min.js"></script>
+</head>
 <div class="container">
     <div class="row">
         <div class="col-md-12">
@@ -7,21 +12,36 @@
                     <h3 class="panel-title"><span class="glyphicon glyphicon-user"></span>Sign up</h3>
                 </div>
                 <div class="panel-body">
-                    <form action="/signup" method="post">
+                    <form action="/signup" method="post" role="form" class="signup-form">
                         <div class="form-group">
                             <label>Email address</label>
-                            <input type="email" name="email" class="form-control" placeholder="Email">
+                            <input type="email" name="email" class="form-control" placeholder="Email" datatype='e'
+                                nullmsg="Please enter your email!">
+                            <p class="help-block">Use email: admin@example.com</p>
                         </div>
                         <div class="form-group">
                             <label>Password</label>
-                            <input type="password" name="password" class="form-control" placeholder="Password">
+                            <input type="password" name="password1" class="form-control" placeholder="Password"
+                                datatype="*6-16" nullmsg="Please set password!">
+                            <p class="help-block">Use password: 123456</p>
                         </div>
                         <div class="form-group">
                             <label>Comfirm password</label>
-                            <input type="password" name="password2" class="form-control" placeholder="Password">
+                            <input type="password" name="password2" class="form-control" placeholder="Password"
+                                datatype="*" recheck="password1" nullmsg="Please comfirm password!">
+                            <p class="help-block">Use password: 123456</p>
                         </div>
                         <button type="submit" class="btn btn-primary">Sign Up</button>
                     </form>
+
+                    <script>
+                        $(".signup-form").Validform();
+                        var demo = $(".signup-form:eq(1)").Validform();
+                        $(".btn btn-primary").click(function () {
+                            demo.ajaxPost();
+                            return false;
+                        });
+                    </script>
                 </div>
             </div>
         </div>
