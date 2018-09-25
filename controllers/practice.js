@@ -13,13 +13,13 @@ module.exports={
         })
         //can not use .done()
 
-        ctx.response.body= html
-        // ctx.render('practice.html',{
-        //     title:`${name.substring(1)}`,
-        //     topic:`${name.substring(1).substring(0,2)}`,
-        //     introduction:'',
-        //     acticle:html
+        // ctx.response.body= html
+        ctx.render('practice.html',{
+            title:`${name.substring(1)}`,
+            topic:`${name.substring(1).substring(0,2)}`,
+            introduction:'',
+            acticle:html
             
-        // })
+        })
     }
 }
